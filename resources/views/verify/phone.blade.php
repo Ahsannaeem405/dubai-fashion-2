@@ -26,7 +26,7 @@
 
             <div class="row text-center d-block my-3">
                 <div class="col-lg-12 mt-5 mb-2 ">
-                    <h2>STEP 3/5 </h2>
+                    <h2>STEP 2/4 </h2>
 
                 </div>
             </div>

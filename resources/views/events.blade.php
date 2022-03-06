@@ -11,7 +11,7 @@
     </style>
     <div class=" text-center d-block mt-5">
         <div class="col-lg-12 mt-1 mb-2 ">
-            <h2>STEP 5/5 </h2>
+            <h2>STEP 4/4 </h2>
 
         </div>
     </div>
