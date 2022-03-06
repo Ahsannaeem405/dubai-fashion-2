@@ -16,6 +16,7 @@ class UserController extends Controller
     public function index()
     {
 
+
 //        $search=[1,2,5];
 //        $user=User::where(function ($q) use ($search){
 //            foreach ($search as $key=>$value) {

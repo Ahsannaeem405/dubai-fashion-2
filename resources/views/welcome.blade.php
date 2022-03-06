@@ -86,7 +86,7 @@
                     </div>
                 </div>
 
-                <div id="append" class="w-100 row"></div>
+                <div id="append" class="w-100 row m-0"></div>
 
                     <div class="col-md-12 col-12 pt-3" style="text-align: center">
                   <button class="btn btn-secondary w-100" type="button" id="someone">Add more guests</button>
@@ -105,12 +105,28 @@
 
     <script>
         $(document).ready(function(){
-
+var i=1;
             $("#someone").click(function () {
                 var html=$("#userform").html();
+
+                var html = '<div class="row w-100 guest'+i+'">';
+                 html += '<div class="col-lg-12 w-100 text-center my-4 d-flex justify-content-between">' +
+                     '<h3 class="m-auto" >Guest Details</h3>' +
+                     '<i class="fa fa-trash del" del="'+i+'" style="color: red;cursor: pointer"></i>'+
+                     '</div>';
+                html += $('#userform').html();
+                html += '</div>';
+
                $("#append").append(html);
+               i++;
 
             });
+            $(document).on('click','.del',function () {
+
+              var id=$(this).attr('del');
+                $('.guest'+id).remove();
+            });
+
         $("#submitdata").click(function () {
             var valid = true;
             $.each($(".required"), function (index, value) {
