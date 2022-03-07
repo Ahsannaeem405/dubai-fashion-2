@@ -26,6 +26,7 @@ class RsvpController extends Controller
 
     public function rsvpFind($id)
     {
+
         $rsvp=rsvp::find($id);
         $events=eventBooking::where('user_id',$id)->with('event')->get();
         $travelling=rsvp::with('userEvent')
@@ -73,8 +74,8 @@ class RsvpController extends Controller
             $idd =  ($id);
 
             $host="$rsvp->id";
-            $pdf = \PDF::loadView('pdf.report',compact('host','events','rsvp'));
-         // return view('pdf.report',compact('host','events','rsvp'));
+           $pdf = \PDF::loadView('pdf.report',compact('host','events','rsvp'));
+          //return view('pdf.report',compact('host','events','rsvp'));
             $rand= rand(0, 99999999999999);
             $path = 'pdf/';
             $fileName = $rand . '.' . 'pdf' ;

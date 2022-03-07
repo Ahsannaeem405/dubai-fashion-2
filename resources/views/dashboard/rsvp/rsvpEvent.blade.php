@@ -11,6 +11,9 @@
         ul {
             list-style: none;
         }
+        .event-name{
+          font-size: 20px;
+        }
 
         input[type=radio] {
             height: 20px;
